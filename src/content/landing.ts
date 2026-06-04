@@ -39,7 +39,7 @@ export const landing = {
   about: {
     title: "About",
     description:
-      "海外のポッドキャストを深くまで学べるAIポッドキャストアプリです。\n\n個人の興味、それぞれの分野の理解度に応じたレコメンド、学習コンテンツの生成を行い、各個人に合わせた学習支援を行います。",
+      "海外のポッドキャストを深くまで学べる\nAIポッドキャストアプリです。\n\n個人の興味、それぞれの分野の理解度に応じた\nレコメンド、学習コンテンツの生成を行い、\n各個人に合わせた学習支援を行います。",
   },
 
   /** 3. サービス機能（Services） */
@@ -76,7 +76,7 @@ export const landing = {
   /** 4. ダウンロード (CTA) */
   download: {
     title: "今すぐダウンロード",
-    subtitle: "_ポッドキャスト体験を、次のステージへ",
+    subtitle: "ポッドキャスト体験を、次のステージへ",
     primaryCta: {
       label: "Download on the App Store",
       href: "#",
