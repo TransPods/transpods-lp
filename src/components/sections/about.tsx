@@ -1,6 +1,9 @@
+"use client";
+
 import { landing } from "@/content/landing";
 import { Sparkles } from "lucide-react";
 import { Audiowide } from "next/font/google";
+import { motion } from "framer-motion";
 
 const audiowide = Audiowide({ weight: "400", subsets: ["latin"] });
 
@@ -26,6 +29,11 @@ function WaveDivider({ className }: { className?: string }) {
 export function About() {
   const { about } = landing;
 
+  const itemVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } }
+  };
+
   return (
     <section id="about" className="relative w-full pt-32 pb-48 lg:pt-64 lg:pb-72 px-6 flex flex-col items-center justify-center overflow-hidden">
       {/* Background Glows */}
@@ -49,26 +57,36 @@ export function About() {
 
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-950/10 to-transparent pointer-events-none" />
       
-      <div className="relative z-10 max-w-3xl flex flex-col items-center text-center gap-12">
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={{
+          hidden: {},
+          visible: { transition: { staggerChildren: 0.2 } }
+        }}
+        className="relative z-10 max-w-3xl flex flex-col items-center text-center gap-12"
+      >
         
         {/* Section Header */}
-        <h2 className={`text-[24px] lg:text-[64px] font-semibold tracking-wider text-white underline underline-offset-[12px] decoration-1 ${audiowide.className}`}>
+        <motion.h2 variants={itemVariants} className={`text-[24px] lg:text-[64px] font-semibold tracking-wider text-white underline underline-offset-[12px] decoration-1 ${audiowide.className}`}>
           {about.title}
-        </h2>
+        </motion.h2>
 
         {/* Description */}
         <div className="space-y-12">
           {about.description.split("\n\n").map((paragraph, index) => (
-            <p 
+            <motion.p 
               key={index} 
+              variants={itemVariants}
               className="text-base md:text-3xl font-light leading-loose tracking-tight text-white whitespace-pre-wrap"
             >
               {paragraph}
-            </p>
+            </motion.p>
           ))}
         </div>
         
-      </div>
+      </motion.div>
 
       {/* Bottom Wave */}
       <div className="absolute bottom-0 left-0 w-full z-0 pointer-events-none rotate-180 opacity-50">

@@ -26,12 +26,14 @@ export function Header() {
           ))}
         </nav>
 
-        <a
-          href="#download"
-          className="inline-flex items-center justify-center h-9 px-4 rounded-full bg-white text-zinc-950 font-medium text-sm transition-transform hover:scale-105 active:scale-95"
-        >
-          {nav.cta}
-        </a>
+        <div className="relative group p-[1.5px] hover:p-[2.5px] transition-all duration-200 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500">
+          <a
+            href="#download"
+            className="inline-flex items-center justify-center h-9 px-4 rounded-full bg-zinc-950 text-white font-medium text-sm transition-all active:scale-95"
+          >
+            {nav.cta}
+          </a>
+        </div>
       </div>
     </header>
   );

@@ -1,6 +1,9 @@
+"use client";
+
 import { landing } from "@/content/landing";
 import { Audiowide } from "next/font/google";
 import { ServicesCarousel } from "./services-carousel";
+import { motion } from "framer-motion";
 
 const audiowide = Audiowide({ weight: "400", subsets: ["latin"] });
 
@@ -27,14 +30,26 @@ export function Services() {
       <div className="max-w-5xl w-full flex flex-col gap-16 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center gap-4">
+        <motion.div 
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="flex flex-col items-center text-center gap-4"
+        >
           <h2 className={`text-[24px] lg:text-[64px] font-semibold tracking-wider text-white underline underline-offset-[12px] decoration-1 ${audiowide.className}`}>
             {services.title}
           </h2>
-        </div>
+        </motion.div>
 
         {/* Video Embed */}
-        <div className="w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/10 aspect-video bg-zinc-900/50">
+        <motion.div 
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/10 aspect-video bg-zinc-900/50"
+        >
           <iframe 
             className="w-full h-full"
             src="https://www.youtube.com/embed/J-U6t8PeKJI" 
@@ -42,10 +57,17 @@ export function Services() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowFullScreen
           ></iframe>
-        </div>
+        </motion.div>
 
         {/* Services Carousel */}
-        <ServicesCarousel items={services.items} />
+        <motion.div 
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          <ServicesCarousel items={services.items} />
+        </motion.div>
       </div>
     </section>
   );

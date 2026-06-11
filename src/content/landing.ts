@@ -26,12 +26,12 @@ export const landing = {
     primaryCta: {
       label: "Download on the App Store",
       icon: "Apple", // We will use a react icon or SVG
-      href: "#",
+      href: "https://apps.apple.com/jp/app/transpods/id6755274570",
     },
     secondaryCta: {
       label: "GET IT ON Google Play",
       icon: "Play",
-      href: "#",
+      href: "https://play.google.com/store/apps/details?id=com.transpod.podstudy&hl=ja",
     },
   },
 
@@ -79,11 +79,11 @@ export const landing = {
     subtitle: "ポッドキャスト体験を、次のステージへ",
     primaryCta: {
       label: "Download on the App Store",
-      href: "#",
+      href: "https://apps.apple.com/jp/app/transpods/id6755274570",
     },
     secondaryCta: {
       label: "GET IT ON Google Play",
-      href: "#",
+      href: "https://play.google.com/store/apps/details?id=com.transpod.podstudy&hl=ja",
     },
   },
 
