@@ -19,7 +19,7 @@ export function Download() {
       <motion.div 
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: [0, 0, 0.58, 1] as const }}
         viewport={{ once: true, margin: "-100px" }}
         className="relative z-10 max-w-3xl flex flex-col items-center text-center gap-6 sm:gap-10 py-8 sm:py-12"
       >

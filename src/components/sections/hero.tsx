@@ -10,12 +10,12 @@ export function Hero() {
 
   const itemVariants = {
     hidden: { x: -100, opacity: 0 },
-    visible: { x: 0, opacity: 1, transition: { duration: 1, ease: "easeOut" } }
+    visible: { x: 0, opacity: 1, transition: { duration: 1, ease: [0, 0, 0.58, 1] as const } }
   };
 
   const buttonContainerVariants = {
     hidden: { y: 50, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 1, ease: "easeOut" } }
+    visible: { y: 0, opacity: 1, transition: { duration: 1, ease: [0, 0, 0.58, 1] as const } }
   };
 
   return (

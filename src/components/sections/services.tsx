@@ -33,7 +33,7 @@ export function Services() {
         <motion.div 
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: [0, 0, 0.58, 1] as const }}
           viewport={{ once: true, margin: "-50px" }}
           className="flex flex-col items-center text-center gap-4"
         >
