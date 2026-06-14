@@ -6,17 +6,6 @@
  * このファイルが TransPods 公式サイトのすべての文言を保持します。
  * 各セクションコンポーネント (src/components/sections/*) は、ここから
  * 値を import するだけで、自身にはハードコードされた文言を持ちません。
- *
- * 【運用ルール】
- * - 原稿の更新は、原則このファイルの編集だけで完結します。
- * - 非エンジニアのライターは Notion で原稿を書き、その内容を
- *   対応するキーに反映してください（コード知識は不要）。
- * - 文字列の追加・変更のみ行い、キー名や構造は変更しないでください。
- *   構造を変える場合はエンジニアに依頼してください。
- *
- * ※ フェーズ1時点では仮テキスト（プレースホルダー）です。
- *   フェーズ2で Figma の確定コピーに差し替えます。
- * ===========================================================================
  */
 
 export const landing = {
@@ -24,168 +13,90 @@ export const landing = {
   nav: {
     logoAlt: "TransPods",
     links: [
-      { label: "特徴", href: "#features" },
-      { label: "料金", href: "#pricing" },
-      { label: "よくある質問", href: "#faq" },
+      { label: "About", href: "#about" },
+      { label: "Services", href: "#services" },
     ],
     cta: "アプリを入手",
   },
 
   /** 1. ヒーロー（ファーストビュー） */
   hero: {
-    badge: "語学学習アプリ",
-    title: "聞いて学ぶ、新しい語学習慣",
-    subtitle:
-      "ポッドキャストで自然に外国語が身につく。あなたのレベルに合った音声で、毎日少しずつ語学力を伸ばしましょう。",
-    primaryCta: "無料ではじめる",
-    secondaryCta: "使い方を見る",
-    note: "クレジットカード不要・いつでも解約可能",
+    title: "世界の情報を\n耳でスマートに。",
+    subtitle: "Smartly hear the world's information.",
+    primaryCta: {
+      label: "Download on the App Store",
+      icon: "Apple", // We will use a react icon or SVG
+      href: "https://apps.apple.com/jp/app/transpods/id6755274570",
+    },
+    secondaryCta: {
+      label: "GET IT ON Google Play",
+      icon: "Play",
+      href: "https://play.google.com/store/apps/details?id=com.transpod.podstudy&hl=ja",
+    },
   },
 
-  /** 2. 課題提起（Problem） */
-  problem: {
-    title: "従来の語学学習が続かない理由",
-    subtitle: "教科書も、単語帳も、三日坊主になっていませんか？",
+  /** 2. アバウト（About） */
+  about: {
+    title: "About",
+    description:
+      "海外のポッドキャストを深くまで学べる\nAIポッドキャストアプリです。\n\n個人の興味、それぞれの分野の理解度に応じた\nレコメンド、学習コンテンツの生成を行い、\n各個人に合わせた学習支援を行います。",
+  },
+
+  /** 3. サービス機能（Services） */
+  services: {
+    title: "Services",
     items: [
       {
-        title: "退屈で続かない",
-        description:
-          "単調な暗記中心の学習はモチベーションが続かず、いつの間にか手が止まってしまいます。",
+        title: "翻訳",
+        englishTitle: "Translation",
+        description: "海外のポッドキャストも言語の壁なく、知識やアイデアにアクセスできます。",
+        icon: "Translation", // placeholder for icon mapping
       },
       {
-        title: "レベルが合わない",
-        description:
-          "難しすぎる教材は挫折のもと。簡単すぎる教材では成長を実感できません。",
+        title: "図解",
+        englishTitle: "Diagram",
+        description: "内容をわかりやすい図や構造で整理し、複雑なテーマも直感的に理解できます。",
+        icon: "Diagram",
       },
       {
-        title: "学習時間がとれない",
-        description:
-          "まとまった勉強時間の確保は難しい。スキマ時間を活かせる学習法が必要です。",
+        title: "要約",
+        englishTitle: "Summary",
+        description: "AIが重要なポイントを抽出し、忙しい日でも効率よく学べます。",
+        icon: "Summary",
+      },
+      {
+        title: "メモ",
+        englishTitle: "Memo",
+        description: "聞きながらメモを保存し、自分だけの知識としてストックできます。",
+        icon: "Memo",
       },
     ],
   },
 
-  /** 3. 特徴（Features） */
-  features: {
-    title: "TransPods が選ばれる理由",
-    subtitle: "聞き流すだけで、語学力が自然に伸びる仕組み",
-    items: [
-      {
-        title: "レベル別の音声コンテンツ",
-        description:
-          "あなたの理解度より少しだけ難しい音声を提供。無理なく着実にステップアップできます。",
-      },
-      {
-        title: "スキマ時間で学べる",
-        description:
-          "通勤・家事・運動中など、耳が空いている時間がそのまま学習時間に変わります。",
-      },
-      {
-        title: "豊富なジャンル",
-        description:
-          "ニュース、物語、日常会話など、興味のあるテーマで飽きずに続けられます。",
-      },
-      {
-        title: "学習の見える化",
-        description:
-          "リスニング時間や進捗を記録。成長を実感できるからモチベーションが続きます。",
-      },
-    ],
+  /** 4. ダウンロード (CTA) */
+  download: {
+    title: "今すぐダウンロード",
+    subtitle: "ポッドキャスト体験を、次のステージへ",
+    primaryCta: {
+      label: "Download on the App Store",
+      href: "https://apps.apple.com/jp/app/transpods/id6755274570",
+    },
+    secondaryCta: {
+      label: "GET IT ON Google Play",
+      href: "https://play.google.com/store/apps/details?id=com.transpod.podstudy&hl=ja",
+    },
   },
 
-  /** 4. 料金（Pricing） */
-  pricing: {
-    title: "シンプルな料金プラン",
-    subtitle: "まずは無料で。あなたのペースに合わせて選べます。",
-    plans: [
-      {
-        name: "Free",
-        price: "¥0",
-        period: "/ 月",
-        description: "気軽に語学学習を始めたい方へ",
-        features: [
-          "基本コンテンツへのアクセス",
-          "1日30分までのリスニング",
-          "学習進捗の記録",
-        ],
-        cta: "無料ではじめる",
-        highlighted: false,
-      },
-      {
-        name: "Pro",
-        price: "¥980",
-        period: "/ 月",
-        description: "本気で語学力を伸ばしたい方へ",
-        features: [
-          "すべてのコンテンツが見放題",
-          "リスニング時間が無制限",
-          "オフライン再生",
-          "詳細な学習分析",
-        ],
-        cta: "Pro をはじめる",
-        highlighted: true,
-      },
-    ],
-  },
-
-  /** 5. よくある質問（FAQ） */
-  faq: {
-    title: "よくある質問",
-    subtitle: "ご不明な点はこちらをご確認ください",
-    items: [
-      {
-        question: "対応している言語は？",
-        answer:
-          "現在は英語に対応しています。今後、対応言語を順次拡大していく予定です。",
-      },
-      {
-        question: "初心者でも使えますか？",
-        answer:
-          "はい。あなたのレベルに合わせた音声を提供するため、語学初心者の方でも無理なく始められます。",
-      },
-      {
-        question: "無料プランだけでも使えますか？",
-        answer:
-          "もちろんです。無料プランでも基本的なコンテンツと学習機能をご利用いただけます。",
-      },
-      {
-        question: "解約はいつでもできますか？",
-        answer:
-          "はい。Pro プランはいつでも解約可能で、解約後も期間終了までご利用いただけます。",
-      },
-    ],
-  },
-
-  /** 6. 最終 CTA */
-  cta: {
-    title: "今日から、聞いて学ぶ習慣を",
-    subtitle:
-      "TransPods で語学学習を毎日の楽しみに変えましょう。まずは無料でお試しください。",
-    primaryCta: "無料ではじめる",
-    note: "iOS / Android 対応",
-  },
-
-  /** 7. フッター */
+  /** 5. フッター */
   footer: {
-    description: "聞いて学ぶ、新しい語学習慣。",
-    columns: [
-      {
-        title: "プロダクト",
-        links: [
-          { label: "特徴", href: "#features" },
-          { label: "料金", href: "#pricing" },
-          { label: "よくある質問", href: "#faq" },
-        ],
-      },
-      {
-        title: "リーガル",
-        links: [
-          { label: "プライバシーポリシー", href: "/privacy" },
-          { label: "利用規約", href: "/terms" },
-        ],
-      },
+    links: [
+      { label: "お問い合せ", href: "#contact" },
     ],
-    copyright: `© ${new Date().getFullYear()} TransPods. All rights reserved.`,
+    socials: [
+      { platform: "Instagram", href: "#", icon: "Instagram" },
+      { platform: "X", href: "#", icon: "X" },
+    ],
+    copyright: `©︎ TransPods`,
   },
 } as const;
 
