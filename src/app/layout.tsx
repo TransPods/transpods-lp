@@ -25,7 +25,16 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
-  keywords: ["語学学習", "ポッドキャスト", "英語学習", "リスニング", "TransPods"],
+  keywords: [
+    "海外ポッドキャスト",
+    "ポッドキャスト学習",
+    "AI学習アプリ",
+    "翻訳音声",
+    "要約",
+    "図解",
+    "語学学習",
+    "TransPods",
+  ],
   alternates: {
     canonical: "/",
   },
