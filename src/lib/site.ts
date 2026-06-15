@@ -9,9 +9,9 @@ export const siteConfig = {
   /** transpods.app — 本番ドメイン。Vercel 接続時にこの値で確定 */
   url: "https://transpods.app",
   /** <title> や OGP のデフォルトタイトル */
-  title: "TransPods — 海外ポッドキャストをAIで深く学ぶ",
+  title: "TransPods — 世界の情報を耳でスマートに。",
   description:
-    "海外のポッドキャストをAIで深く学べる学習アプリ。翻訳音声・図解・要約と、あなたの興味や理解度に合わせたレコメンドで、世界の情報を耳からスマートにインプットできます。",
+    "ポッドキャストをAIで深く学べる学習アプリ。翻訳音声・図解・要約と、あなたの興味や理解度に合わせたレコメンドで、世界の情報を耳からスマートにインプットできます。",
   locale: "ja_JP",
   /** OGP 画像（1200x630）。public/ に配置予定 */
   ogImage: "/og-image.png",
