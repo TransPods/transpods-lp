@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: [
-    "海外ポッドキャスト",
+    "ポッドキャスト",
     "ポッドキャスト学習",
     "AI学習アプリ",
     "翻訳音声",
