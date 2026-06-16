@@ -49,6 +49,8 @@ export function Footer() {
             <Link 
               key={link.label}
               href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm font-medium text-zinc-400 transition-colors hover:text-white"
             >
               {link.label}
@@ -64,6 +66,8 @@ export function Footer() {
                 key={social.platform}
                 href={social.href}
                 aria-label={social.platform}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-zinc-500 transition-colors hover:text-white"
               >
                 {social.icon === "Instagram" ? <InstagramIcon /> : <XIcon />}

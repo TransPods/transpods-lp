@@ -90,11 +90,10 @@ export const landing = {
   /** 5. フッター */
   footer: {
     links: [
-      { label: "お問い合せ", href: "#contact" },
+      { label: "お問い合せ", href: "https://docs.google.com/forms/d/e/1FAIpQLSf-dLsHo7Al2x4tLaapsY2H0ZZKXfwpuxC2zYWvRPqwY4FwTg/viewform?usp=dialog" },
     ],
     socials: [
-      { platform: "Instagram", href: "#", icon: "Instagram" },
-      { platform: "X", href: "#", icon: "X" },
+      { platform: "X", href: "https://x.com/transpods_app", icon: "X" },
     ],
     copyright: `©︎ TransPods`,
   },
