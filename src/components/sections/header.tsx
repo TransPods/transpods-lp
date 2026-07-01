@@ -4,10 +4,14 @@ import { landing } from "@/content/landing";
 import { Apple, Play } from "lucide-react";
 
 export function Header() {
-  const { nav } = landing;
+  const { nav, notice } = landing;
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-zinc-950/50 backdrop-blur-md">
+    <header
+      className={`fixed z-50 w-full border-b border-white/10 bg-zinc-950/50 backdrop-blur-md ${
+        notice.enabled ? "top-8 sm:top-9" : "top-0"
+      }`}
+    >
       <div className="mx-auto flex h-16 lg:h-24 max-w-5xl items-center justify-between px-6">
         <Link href="/" className="flex items-center gap-2" aria-label={nav.logoAlt}>
           {/* Logo icon */}
