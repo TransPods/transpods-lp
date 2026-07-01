@@ -1,8 +1,8 @@
 "use client";
 
 import { landing } from "@/content/landing";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { StoreButtons } from "./store-buttons";
 
 export function Download() {
   const { download } = landing;
@@ -33,37 +33,10 @@ export function Download() {
           </h2>
         </div>
 
-        <div className="flex flex-row items-center justify-center gap-2 sm:gap-4 mt-8 w-full max-w-full px-2">
-          <div className="relative group flex-1 sm:flex-none p-[2px] hover:p-[3px] transition-all duration-200 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500">
-            <a
-              href={download.primaryCta.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative flex items-center justify-center gap-1 sm:gap-2 overflow-hidden rounded-[10px] bg-zinc-950 px-2 sm:px-8 py-2 sm:py-3 lg:px-10 font-semibold text-white transition-all active:scale-95"
-            >
-              <Image src="/app-store.png" alt="App Store" width={24} height={24} className="h-5 sm:h-9 w-auto" />
-              <div className="flex flex-col items-start leading-none text-left whitespace-nowrap">
-                <span className="text-[7px] sm:text-[10px] text-zinc-400 font-normal">Download on the</span>
-                <span className="text-xs sm:text-base font-bold">App Store</span>
-              </div>
-            </a>
-          </div>
-
-          <div className="relative group flex-1 sm:flex-none p-[2px] hover:p-[3px] transition-all duration-200 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500">
-            <a
-              href={download.secondaryCta.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative flex items-center justify-center gap-1 sm:gap-2 overflow-hidden rounded-[10px] bg-zinc-950 px-2 sm:px-8 py-2 sm:py-3 lg:px-10 font-semibold text-white transition-all active:scale-95"
-            >
-              <Image src="/google-play.png" alt="Google Play" width={24} height={24} className="h-4 sm:h-7 w-auto" />
-              <div className="flex flex-col items-start leading-none text-left whitespace-nowrap">
-                <span className="text-[7px] sm:text-[10px] text-zinc-400 font-normal">GET IT ON</span>
-                <span className="text-xs sm:text-base font-bold">Google Play</span>
-              </div>
-            </a>
-          </div>
-        </div>
+        <StoreButtons
+          className="justify-center mt-8 max-w-full px-2"
+          iconClassName={{ appStore: "h-5 sm:h-9", googlePlay: "h-4 sm:h-7" }}
+        />
       </motion.div>
     </section>
   );
