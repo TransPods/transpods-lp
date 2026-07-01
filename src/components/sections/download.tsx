@@ -5,7 +5,11 @@ import { motion } from "framer-motion";
 import { StoreButtons } from "./store-buttons";
 
 export function Download() {
-  const { download } = landing;
+  const { download, notice } = landing;
+
+  // 休止中は download の文言が状況と矛盾するため、notice 側の見出しに差し替える。
+  const title = notice.enabled ? notice.downloadTitle : download.title;
+  const subtitle = notice.enabled ? notice.downloadSubtitle : download.subtitle;
 
   return (
     <section id="download" className="relative w-full py-16 sm:py-24 px-6 flex flex-col items-center justify-center overflow-hidden mt-8 sm:mt-12">
@@ -26,10 +30,10 @@ export function Download() {
         
         <div className="space-y-4 px-2 w-full max-w-full overflow-hidden">
           <p className="text-[4vw] sm:text-lg md:text-xl text-white font-light tracking-wider whitespace-nowrap">
-            {download.subtitle}
+            {subtitle}
           </p>
           <h2 className="text-[7vw] sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white whitespace-nowrap">
-            {download.title}
+            {title}
           </h2>
         </div>
 
