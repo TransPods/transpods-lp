@@ -20,6 +20,9 @@ export const landing = {
     message: "現在サービスを一時休止しています。2026年9月頃の再リリースに向けて準備中です。",
     /** ダウンロードボタンが無効化されているときのラベル */
     ctaDisabledLabel: "準備中",
+    /** 休止中の download セクション見出し（enabled のとき download.title / subtitle の代わりに使う） */
+    downloadTitle: "再リリースに向けて準備中",
+    downloadSubtitle: "2026年9月頃の再開をお楽しみに",
   },
 
   /** ヘッダー / ナビゲーション */
