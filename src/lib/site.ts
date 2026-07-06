@@ -20,6 +20,9 @@ export const siteConfig = {
     appStore: "#",
     googlePlay: "#",
     twitter: "https://x.com/transpods",
+    /** 先行アクセス登録フォーム（Google フォーム） */
+    earlyAccessForm:
+      "https://docs.google.com/forms/d/e/1FAIpQLSe9tBixw7ASdDvQ3B4J11YwPG5EoruDB7Suj2Y3Nggxb48N2g/viewform",
   },
 } as const;
 
