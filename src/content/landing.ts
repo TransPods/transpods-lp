@@ -18,11 +18,11 @@ export const landing = {
     enabled: true,
     /** バナー本文（1 行想定） */
     message: "現在サービスを一時休止しています。2026年9月頃の再リリースに向けて準備中です。",
-    /** ダウンロードボタンが無効化されているときのラベル */
-    ctaDisabledLabel: "準備中",
     /** 休止中の download セクション見出し（enabled のとき download.title / subtitle の代わりに使う） */
     downloadTitle: "再リリースに向けて準備中",
     downloadSubtitle: "2026年9月頃の再開をお楽しみに",
+    /** 休止中に表示する先行アクセス登録 CTA のラベル（リンク先は site.ts の earlyAccessForm） */
+    earlyAccessLabel: "先行アクセスに登録",
   },
 
   /** ヘッダー / ナビゲーション */
