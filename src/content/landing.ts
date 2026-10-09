@@ -80,26 +80,34 @@ export const landing = {
       enabled: false,
       youtubeId: "J-U6t8PeKJI",
     },
+    /** 事業説明資料（Kotoriva_事業説明_20260920）のプロダクトフロー 4 ステップに対応 */
     items: [
       {
-        title: "AI番組化",
-        englishTitle: "Create",
+        title: "ソースを渡す",
+        englishTitle: "Step 01",
         description:
-          "テキストやメモから、AIが台本と音声を生成。キャラクターボイスや声のクローンで、あなたらしい番組がつくれます。",
-        icon: "Create",
+          "メモ・記事・物語を渡すだけ。すでに書いた記事から、番組を始められます。",
+        icon: "Source",
       },
       {
-        title: "図解動画",
-        englishTitle: "Visualize",
+        title: "ホストを選ぶ",
+        englishTitle: "Step 02",
         description:
-          "音声に同期した図解スライド動画を自動生成。動画プラットフォームにもそのまま展開できます。",
-        icon: "Visualize",
+          "テーマや雰囲気に合わせて、AIキャラクターを選択。驚き方や共感のしかたまで、そのキャラクターらしく話します。",
+        icon: "Host",
+      },
+      {
+        title: "エピソード生成",
+        englishTitle: "Step 03",
+        description:
+          "台本も音声も、AIが生成。修正はテキストを直すだけ。録り直しは、ありません。",
+        icon: "Episode",
       },
       {
         title: "ワンクリック配信",
-        englishTitle: "Publish",
+        englishTitle: "Step 04",
         description:
-          "Spotify・Apple Podcasts・YouTube・RSSへワンクリックで配信。Kotorivaアプリでは無料で聴いてもらえます。",
+          "Spotify・Apple Podcasts・YouTube・RSSへ、ワンクリックで配信できます。",
         icon: "Publish",
       },
     ],

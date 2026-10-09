@@ -32,7 +32,6 @@ export const metadata: Metadata = {
     "AI音声",
     "キャラクターボイス",
     "音声コンテンツ",
-    "図解動画",
     "Kotoriva",
   ],
   alternates: {
