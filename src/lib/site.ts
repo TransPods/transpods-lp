@@ -9,7 +9,7 @@ export const siteConfig = {
   /** kotoriva.com — 本番ドメイン（transpods.app からは 308 で転送する） */
   url: "https://kotoriva.com",
   /** <title> や OGP のデフォルトタイトル */
-  title: "Kotoriva — テキストから、あなたの番組へ。",
+  title: "Kotoriva — あなたの知識と想いを、好きになれる声に乗せて。",
   description:
     "AIキャラクターと一緒にポッドキャストを作れるサービス。メモ・記事・物語を渡すだけで台本と音声をAIが生成し、Spotify・Apple Podcasts・YouTube・RSSへワンクリックで配信できます。",
   locale: "ja_JP",
