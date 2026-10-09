@@ -11,7 +11,7 @@ export const siteConfig = {
   /** <title> や OGP のデフォルトタイトル */
   title: "Kotoriva — テキストから、あなたの番組へ。",
   description:
-    "誰でもポッドキャストを作成・配信できるAIプラットフォーム。テキストから台本・音声・翻訳版・図解動画をAIが生成し、Spotify・Apple Podcasts・YouTube・RSSへワンクリックで配信できます。",
+    "誰でもポッドキャストを作成・配信できるAIプラットフォーム。テキストから台本・音声・図解動画をAIが生成し、Spotify・Apple Podcasts・YouTube・RSSへワンクリックで配信できます。",
   locale: "ja_JP",
   /** OGP 画像（1200x630）。public/ に配置予定 */
   ogImage: "/og-image.png",

@@ -45,7 +45,7 @@ export const landing = {
   /** 1. ヒーロー（ファーストビュー） */
   hero: {
     title: "テキストから、\nあなたの番組へ。",
-    subtitle: "Create, translate, and publish your podcast with AI.",
+    subtitle: "書くだけで、AIが台本も声も配信も。",
     /**
      * ストアリンクは正式リリース後 (notice.enabled === false) にのみ表示される。
      * リスナー向け聴取アプリ Kotoriva の配信リンク。
@@ -66,7 +66,7 @@ export const landing = {
   about: {
     title: "About",
     description:
-      "誰でもポッドキャストを届けられる、\n配信制作支援プラットフォームです。\n\nテキストを書くだけで、AIが音声番組に。\n台本づくりから音声化、翻訳、配信まで、\n番組運営のすべてをまるごと支援します。",
+      "誰でもポッドキャストを届けられる、\n配信制作支援プラットフォームです。\n\nテキストを書くだけで、AIが音声番組に。\n台本づくりから音声化、配信まで、\n番組運営のすべてをまるごと支援します。",
   },
 
   /** 3. サービス機能（Services） */
@@ -87,13 +87,6 @@ export const landing = {
         description:
           "テキストやメモから、AIが台本と音声を生成。キャラクターボイスや声のクローンで、あなたらしい番組がつくれます。",
         icon: "Create",
-      },
-      {
-        title: "多言語化",
-        englishTitle: "Translate",
-        description:
-          "つくった番組をAIが翻訳・吹き替え。日本語の番組を、そのまま世界のリスナーに届けられます。",
-        icon: "Translate",
       },
       {
         title: "図解動画",
