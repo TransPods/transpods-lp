@@ -134,7 +134,8 @@ export const landing = {
       { label: "お問い合せ", href: "https://docs.google.com/forms/d/e/1FAIpQLSf-dLsHo7Al2x4tLaapsY2H0ZZKXfwpuxC2zYWvRPqwY4FwTg/viewform?usp=dialog" },
     ],
     socials: [
-      { platform: "X", href: "https://x.com/transpods_app", icon: "X" },
+      /** 公式アカウント開設までは代表の個人アカウントを掲載（公式と誤解されないよう label を表示） */
+      { platform: "X", label: "代表 山田", href: "https://x.com/yamatetsu0703", icon: "X" },
     ],
     copyright: `©︎ Kotoriva`,
   },
