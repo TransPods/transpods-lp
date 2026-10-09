@@ -6,8 +6,8 @@
 
 export const siteConfig = {
   name: "Kotoriva",
-  /** kotoriva.com — 本番ドメイン（transpods.app からは 308 で転送する） */
-  url: "https://kotoriva.com",
+  /** 本番ドメイン。Vercel で www をプライマリにしている（kotoriva.com・transpods.app からは 308 で転送） */
+  url: "https://www.kotoriva.com",
   /** <title> や OGP のデフォルトタイトル */
   title: "Kotoriva — あなたの知識と想いを、好きになれる声に乗せて。",
   description:
