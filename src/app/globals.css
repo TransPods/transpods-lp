@@ -5,6 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Kotoriva ブランドカラー（ロゴのグラデーション両端） */
+  --color-brand-violet: #807ef8;
+  --color-brand-sky: #6bd8f0;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   /* Inter（ラテン）→ Noto Sans JP（日本語）→ system のフォールバック順 */

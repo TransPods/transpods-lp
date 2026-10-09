@@ -25,8 +25,8 @@ export function Hero() {
       {/* Giant faint text in background */}
       <div className="absolute inset-0 z-0 flex items-center justify-start overflow-hidden pointer-events-none select-none opacity-[0.03]">
         <span className="text-[40vw] font-serif font-bold leading-[0.85] tracking-tighter text-white whitespace-nowrap ml-[-5vw] flex flex-col">
-          <span>Tra</span>
-          <span className="ml-[5vw]">Pod</span>
+          <span>Koto</span>
+          <span className="ml-[5vw]">riva</span>
         </span>
       </div>
 
@@ -84,11 +84,11 @@ export function Hero() {
           className="absolute lg:relative top-10 lg:top-auto right-[-10%] lg:right-[0%] w-[120%] lg:w-[75%] flex justify-end order-1 lg:order-2 z-10 pointer-events-none lg:scale-[1.25] lg:translate-x-0"
         >
           <Image 
-            src="/main-visual.png" 
-            alt="TransPods App Interface" 
-            width={1600} 
-            height={1200} 
-            className="w-full h-auto object-contain drop-shadow-[0_0_80px_rgba(16,185,129,0.15)]"
+            src="/kotoriva-symbol.png" 
+            alt="" 
+            width={1200} 
+            height={1097} 
+            className="w-[70%] lg:w-[60%] h-auto object-contain drop-shadow-[0_0_80px_rgba(128,126,248,0.35)]"
             priority 
           />
         </motion.div>

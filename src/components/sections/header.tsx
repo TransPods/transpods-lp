@@ -15,7 +15,7 @@ export function Header() {
       <div className="mx-auto flex h-16 lg:h-24 max-w-5xl items-center justify-between px-6">
         <Link href="/" className="flex items-center gap-2" aria-label={nav.logoAlt}>
           {/* Logo icon */}
-          <Image src="/logo.png" alt="TransPods Logo" width={300} height={100} className="h-10 lg:h-16 w-auto object-contain" />
+          <Image src="/kotoriva-logo-white.png" alt={nav.logoAlt} width={1200} height={250} className="h-7 lg:h-10 w-auto object-contain" priority />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -30,7 +30,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="relative group p-[1.5px] hover:p-[2.5px] transition-all duration-200 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500">
+        <div className="relative group p-[1.5px] hover:p-[2.5px] transition-all duration-200 rounded-full bg-gradient-to-r from-brand-violet to-brand-sky">
           <a
             href="#download"
             className="inline-flex items-center justify-center h-9 px-4 rounded-full bg-zinc-950 text-white font-medium text-sm transition-all active:scale-95"

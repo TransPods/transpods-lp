@@ -42,22 +42,24 @@ export function Services() {
           </h2>
         </motion.div>
 
-        {/* Video Embed */}
-        <motion.div 
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: true, margin: "-50px" }}
-          className="w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/10 aspect-video bg-zinc-900/50"
-        >
-          <iframe 
-            className="w-full h-full"
-            src="https://www.youtube.com/embed/J-U6t8PeKJI" 
-            title="YouTube video player" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowFullScreen
-          ></iframe>
-        </motion.div>
+        {/* Video Embed（landing.services.video.enabled が true のときのみ表示） */}
+        {services.video.enabled && (
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/10 aspect-video bg-zinc-900/50"
+          >
+            <iframe
+              className="w-full h-full"
+              src={`https://www.youtube.com/embed/${services.video.youtubeId}`}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </motion.div>
+        )}
 
         {/* Services Carousel */}
         <motion.div 

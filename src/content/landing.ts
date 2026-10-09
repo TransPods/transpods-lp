@@ -3,45 +3,56 @@
  * LP 全テキストの集約ファイル
  * ===========================================================================
  *
- * このファイルが TransPods 公式サイトのすべての文言を保持します。
+ * このファイルが Kotoriva 公式サイトのすべての文言を保持します。
  * 各セクションコンポーネント (src/components/sections/*) は、ここから
  * 値を import するだけで、自身にはハードコードされた文言を持ちません。
+ *
+ * 2026-08: 事業方針の転換に伴い、リスナー向けアプリ LP から
+ * 「ポッドキャスト配信制作支援プラットフォーム」(クリエイター向け) の
+ * プレローンチ LP へ全面刷新。
+ *
+ * 2026-10: TransPods → Kotoriva へのリネームに伴いブランド表記を更新。
  */
 
 export const landing = {
   /**
-   * サービス休止のお知らせ。
-   * 再リリース時は enabled を false にするだけで告知バナーが消え、
-   * ダウンロードボタンも通常の有効状態に戻る。
+   * プレローンチ告知。
+   * enabled が true の間はバナーを表示し、CTA がストアボタンの代わりに
+   * 先行アクセス登録 (site.ts の earlyAccessForm) になる。
+   * 正式リリース時は enabled を false にする（CTA の再設計もあわせて行う）。
    */
   notice: {
     enabled: true,
     /** バナー本文（1 行想定） */
-    message: "現在サービスを一時休止しています。2026年9月頃の再リリースに向けて準備中です。",
-    /** 休止中の download セクション見出し（enabled のとき download.title / subtitle の代わりに使う） */
-    downloadTitle: "再リリースに向けて準備中",
-    downloadSubtitle: "2026年9月頃の再開をお楽しみに",
-    /** 休止中に表示する先行アクセス登録 CTA のラベル（リンク先は site.ts の earlyAccessForm） */
+    message: "正式リリースに向けて開発中です。先行アクセスの事前登録を受付中。",
+    /** プレローンチ中の download セクション見出し（enabled のとき download.title / subtitle の代わりに使う） */
+    downloadTitle: "先行アクセス受付中",
+    downloadSubtitle: "あなたの番組づくりを、いちばん最初に",
+    /** プレローンチ中に表示する先行アクセス登録 CTA のラベル（リンク先は site.ts の earlyAccessForm） */
     earlyAccessLabel: "先行アクセスに登録",
   },
 
   /** ヘッダー / ナビゲーション */
   nav: {
-    logoAlt: "TransPods",
+    logoAlt: "Kotoriva",
     links: [
       { label: "About", href: "#about" },
       { label: "Services", href: "#services" },
     ],
-    cta: "アプリを入手",
+    cta: "先行アクセス",
   },
 
   /** 1. ヒーロー（ファーストビュー） */
   hero: {
-    title: "世界の情報を\n耳でスマートに。",
-    subtitle: "Smartly hear the world's information.",
+    title: "テキストから、\nあなたの番組へ。",
+    subtitle: "Create, translate, and publish your podcast with AI.",
+    /**
+     * ストアリンクは正式リリース後 (notice.enabled === false) にのみ表示される。
+     * リスナー向け聴取アプリ Kotoriva の配信リンク。
+     */
     primaryCta: {
       label: "Download on the App Store",
-      icon: "Apple", // We will use a react icon or SVG
+      icon: "Apple",
       href: "https://apps.apple.com/jp/app/transpods/id6755274570",
     },
     secondaryCta: {
@@ -55,44 +66,57 @@ export const landing = {
   about: {
     title: "About",
     description:
-      "海外のポッドキャストを深くまで学べる\nAIポッドキャストアプリです。\n\n個人の興味、それぞれの分野の理解度に応じた\nレコメンド、学習コンテンツの生成を行い、\n各個人に合わせた学習支援を行います。",
+      "誰でもポッドキャストを届けられる、\n配信制作支援プラットフォームです。\n\nテキストを書くだけで、AIが音声番組に。\n台本づくりから音声化、翻訳、配信まで、\n番組運営のすべてをまるごと支援します。",
   },
 
   /** 3. サービス機能（Services） */
   services: {
     title: "Services",
+    /**
+     * 紹介動画の埋め込み。旧アプリのデモ動画のため、新サービスの
+     * 動画ができるまで非表示 (enabled: false)。
+     */
+    video: {
+      enabled: false,
+      youtubeId: "J-U6t8PeKJI",
+    },
     items: [
       {
-        title: "翻訳",
-        englishTitle: "Translation",
-        description: "海外のポッドキャストも言語の壁なく、知識やアイデアにアクセスできます。",
-        icon: "Translation", // placeholder for icon mapping
+        title: "AI番組化",
+        englishTitle: "Create",
+        description:
+          "テキストやメモから、AIが台本と音声を生成。キャラクターボイスや声のクローンで、あなたらしい番組がつくれます。",
+        icon: "Create",
       },
       {
-        title: "図解",
-        englishTitle: "Diagram",
-        description: "内容をわかりやすい図や構造で整理し、複雑なテーマも直感的に理解できます。",
-        icon: "Diagram",
+        title: "多言語化",
+        englishTitle: "Translate",
+        description:
+          "つくった番組をAIが翻訳・吹き替え。日本語の番組を、そのまま世界のリスナーに届けられます。",
+        icon: "Translate",
       },
       {
-        title: "要約",
-        englishTitle: "Summary",
-        description: "AIが重要なポイントを抽出し、忙しい日でも効率よく学べます。",
-        icon: "Summary",
+        title: "図解動画",
+        englishTitle: "Visualize",
+        description:
+          "音声に同期した図解スライド動画を自動生成。動画プラットフォームにもそのまま展開できます。",
+        icon: "Visualize",
       },
       {
-        title: "メモ",
-        englishTitle: "Memo",
-        description: "聞きながらメモを保存し、自分だけの知識としてストックできます。",
-        icon: "Memo",
+        title: "ワンクリック配信",
+        englishTitle: "Publish",
+        description:
+          "Spotify・Apple Podcasts・YouTube・RSSへワンクリックで配信。Kotorivaアプリでは無料で聴いてもらえます。",
+        icon: "Publish",
       },
     ],
   },
 
-  /** 4. ダウンロード (CTA) */
+  /** 4. 先行アクセス / ダウンロード (CTA) */
   download: {
-    title: "今すぐダウンロード",
-    subtitle: "ポッドキャスト体験を、次のステージへ",
+    /** 正式リリース後 (notice.enabled === false) に表示される文言 */
+    title: "無料で番組をつくる",
+    subtitle: "あなたの言葉を、ポッドキャストに",
     primaryCta: {
       label: "Download on the App Store",
       href: "https://apps.apple.com/jp/app/transpods/id6755274570",
@@ -111,7 +135,7 @@ export const landing = {
     socials: [
       { platform: "X", href: "https://x.com/transpods_app", icon: "X" },
     ],
-    copyright: `©︎ TransPods`,
+    copyright: `©︎ Kotoriva`,
   },
 } as const;
 

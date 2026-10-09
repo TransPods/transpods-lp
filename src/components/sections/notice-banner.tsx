@@ -13,7 +13,7 @@ export function NoticeBanner() {
   return (
     <div
       role="status"
-      className="fixed top-0 z-[60] w-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-zinc-950"
+      className="fixed top-0 z-[60] w-full bg-gradient-to-r from-brand-violet to-brand-sky text-zinc-950"
     >
       <p className="mx-auto max-w-5xl px-6 py-2 text-center text-xs font-semibold tracking-wide sm:text-sm">
         {notice.message}

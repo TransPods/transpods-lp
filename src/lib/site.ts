@@ -5,13 +5,13 @@
  */
 
 export const siteConfig = {
-  name: "TransPods",
-  /** transpods.app — 本番ドメイン。Vercel 接続時にこの値で確定 */
-  url: "https://transpods.app",
+  name: "Kotoriva",
+  /** kotoriva.com — 本番ドメイン（transpods.app からは 308 で転送する） */
+  url: "https://kotoriva.com",
   /** <title> や OGP のデフォルトタイトル */
-  title: "TransPods — 世界の情報を耳でスマートに。",
+  title: "Kotoriva — テキストから、あなたの番組へ。",
   description:
-    "ポッドキャストをAIで深く学べる学習アプリ。翻訳音声・図解・要約と、あなたの興味や理解度に合わせたレコメンドで、世界の情報を耳からスマートにインプットできます。",
+    "誰でもポッドキャストを作成・配信できるAIプラットフォーム。テキストから台本・音声・翻訳版・図解動画をAIが生成し、Spotify・Apple Podcasts・YouTube・RSSへワンクリックで配信できます。",
   locale: "ja_JP",
   /** OGP 画像（1200x630）。public/ に配置予定 */
   ogImage: "/og-image.png",
