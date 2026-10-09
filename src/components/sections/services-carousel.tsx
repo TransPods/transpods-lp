@@ -10,12 +10,8 @@ interface ServiceItem {
   icon: string;
 }
 
-const imageMap: Record<string, string> = {
-  Translation: "/services-translation.png",
-  Diagram: "/services-diagram.png",
-  Summary: "/services-summary.png",
-  Memo: "/services-memo.png",
-};
+/** englishTitle → カード下部に出すスクリーンショット。新サービスの画面ができたら追加する */
+const imageMap: Record<string, string> = {};
 
 export function ServicesCarousel({ items }: { items: readonly ServiceItem[] }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -53,8 +49,8 @@ export function ServicesCarousel({ items }: { items: readonly ServiceItem[] }) {
       {/* Gradient definition for icons */}
       <svg width="0" height="0" className="absolute">
         <linearGradient id="arrow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop stopColor="#54FF62" offset="0%" />
-          <stop stopColor="#14A1F0" offset="100%" />
+          <stop stopColor="#807EF8" offset="0%" />
+          <stop stopColor="#6BD8F0" offset="100%" />
         </linearGradient>
       </svg>
 
@@ -113,7 +109,7 @@ export function ServicesCarousel({ items }: { items: readonly ServiceItem[] }) {
             >
               <div className="group relative flex flex-col gap-4 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem] border border-white/10 bg-zinc-900/90 p-6 md:p-8 xl:p-10 shadow-[0_0_50px_rgba(0,0,0,0.5)] backdrop-blur-xl transition-all h-[340px] sm:h-[360px] md:h-[480px] lg:h-[500px]">
                 {/* Background glow applied when item is in center (active) */}
-                <div className={`absolute -inset-px rounded-[2rem] lg:rounded-[2.5rem] transition duration-500 ${isCenter ? 'opacity-60' : 'opacity-0'} bg-gradient-to-bl from-cyan-500/20 to-transparent blur-xl`} />
+                <div className={`absolute -inset-px rounded-[2rem] lg:rounded-[2.5rem] transition duration-500 ${isCenter ? 'opacity-60' : 'opacity-0'} bg-gradient-to-bl from-brand-sky/20 to-transparent blur-xl`} />
                 
                 <div className="relative z-10 flex flex-col items-center text-center">
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1 lg:mb-2">{item.title}</h3>
@@ -147,7 +143,7 @@ export function ServicesCarousel({ items }: { items: readonly ServiceItem[] }) {
             onClick={() => setActiveIndex(index)}
             className={`h-2.5 rounded-full transition-all duration-300 ${
               index === activeIndex 
-                ? "bg-emerald-400 w-8" 
+                ? "bg-brand-sky w-8" 
                 : "bg-white/20 hover:bg-white/40 w-2.5"
             }`}
             aria-label={`Go to slide ${index + 1}`}

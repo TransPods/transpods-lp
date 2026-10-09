@@ -47,12 +47,13 @@ export function Footer() {
               <a 
                 key={social.platform}
                 href={social.href}
-                aria-label={social.platform}
+                aria-label={`${social.platform}（${social.label}）`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-500 transition-colors hover:text-white"
+                className="flex items-center gap-2 text-zinc-500 transition-colors hover:text-white"
               >
                 <XIcon />
+                <span className="text-xs font-medium">{social.label}</span>
               </a>
             ))}
           </div>

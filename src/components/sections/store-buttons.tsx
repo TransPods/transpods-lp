@@ -26,7 +26,7 @@ export function StoreButtons({ className = "", iconClassName }: StoreButtonsProp
   if (notice.enabled) {
     return (
       <div className={`flex flex-row items-center gap-4 ${className}`}>
-        <div className="group relative rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 p-[2px] transition-all duration-200 hover:p-[3px]">
+        <div className="group relative rounded-xl bg-gradient-to-r from-brand-violet to-brand-sky p-[2px] transition-all duration-200 hover:p-[3px]">
           <a
             href={siteConfig.links.earlyAccessForm}
             target="_blank"
@@ -51,7 +51,7 @@ export function StoreButtons({ className = "", iconClassName }: StoreButtonsProp
       alt: "App Store",
       smallLabel: "Download on the",
       largeLabel: "App Store",
-      gradient: "from-emerald-500 to-cyan-500",
+      gradient: "from-brand-violet to-brand-sky",
       iconHeight: iconClassName?.appStore ?? "h-8 sm:h-9",
     },
     {
@@ -61,7 +61,7 @@ export function StoreButtons({ className = "", iconClassName }: StoreButtonsProp
       alt: "Google Play",
       smallLabel: "GET IT ON",
       largeLabel: "Google Play",
-      gradient: "from-cyan-500 to-emerald-500",
+      gradient: "from-brand-sky to-brand-violet",
       iconHeight: iconClassName?.googlePlay ?? "h-6 sm:h-7",
     },
   ] as const;

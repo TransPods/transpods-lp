@@ -16,8 +16,8 @@ export function Download() {
       
       {/* Background container */}
       <div className="absolute inset-0 max-w-6xl mx-auto rounded-none border-y border-x-0 border-white sm:rounded-[3rem] sm:border bg-gradient-to-br from-zinc-900 to-zinc-950 overflow-hidden shadow-2xl">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[400px] h-[400px] rounded-full bg-emerald-500/10 blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] rounded-full bg-cyan-500/10 blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[400px] h-[400px] rounded-full bg-brand-violet/10 blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] rounded-full bg-brand-sky/10 blur-[100px] pointer-events-none" />
       </div>
 
       <motion.div 

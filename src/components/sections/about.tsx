@@ -14,12 +14,12 @@ function WaveDivider({ className }: { className?: string }) {
       <path d="M0,120 C320,-80 400,280 720,120 C1040,-80 1120,280 1440,120" stroke="url(#paint1_linear)" strokeWidth="1" fill="none" opacity="0.7" />
       <defs>
         <linearGradient id="paint0_linear" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#54FF62" />
-          <stop offset="1" stopColor="#14A1F0" />
+          <stop stopColor="#807EF8" />
+          <stop offset="1" stopColor="#6BD8F0" />
         </linearGradient>
         <linearGradient id="paint1_linear" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#14A1F0" />
-          <stop offset="1" stopColor="#54FF62" />
+          <stop stopColor="#6BD8F0" />
+          <stop offset="1" stopColor="#807EF8" />
         </linearGradient>
       </defs>
     </svg>
@@ -55,7 +55,7 @@ export function About() {
         <WaveDivider className="w-full h-24 md:h-48 lg:h-64" />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-950/10 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-violet/5 to-transparent pointer-events-none" />
       
       <motion.div 
         initial="hidden"
