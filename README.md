@@ -28,3 +28,7 @@ LP の全テキストは [`src/content/landing.ts`](src/content/landing.ts) に�
 原稿の更新は原則このファイルの編集だけで完結する。
 
 詳細は [`CLAUDE.md`](CLAUDE.md) を参照。
+
+## 要件
+
+Kotoriva Studio（別リポジトリ）との境目の要件（ドメイン、Studio への導線、利用規約・プライバシーポリシーの置き場所など）は [`docs/requirements.md`](docs/requirements.md) にまとめている。

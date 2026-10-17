@@ -17,6 +17,8 @@ TransPods 公式 LP（`transpods.app`）の実装。
 ## ディレクトリ構成
 
 ```
+docs/
+└── requirements.md      # Kotoriva Studio との連携の要件（ドメイン・導線・規約の置き場所）
 src/
 ├── app/
 │   ├── layout.tsx       # ルートレイアウト + SEO/OGP メタデータ
