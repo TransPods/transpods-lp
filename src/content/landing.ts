@@ -32,7 +32,6 @@ export const landing = {
     links: [
       { label: "Kotorivaについて", href: "#about" },
       { label: "キャラクター", href: "#characters" },
-      { label: "制作実績一例", href: "#achievements" },
     ],
     cta: "先行アクセス",
   },

@@ -2,7 +2,6 @@ import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
 import { Characters } from "@/components/sections/characters";
-import { Achievements } from "@/components/sections/achievements";
 import { Access } from "@/components/sections/access";
 import { Footer } from "@/components/sections/footer";
 
@@ -19,7 +18,6 @@ export default function Home() {
         <Hero />
         <About />
         <Characters />
-        <Achievements />
         <Access />
       </main>
       <Footer />
