@@ -1,63 +1,56 @@
+import Image from "next/image";
 import Link from "next/link";
 import { landing } from "@/content/landing";
 
-const XIcon = () => (
+// Clean X (formerly Twitter) brand vector icon
+const XIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
     viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    aria-hidden="true"
+    className={`fill-current ${className}`}
   >
-    <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
   </svg>
 );
 
 export function Footer() {
-  const { footer } = landing;
+  const { footer, nav } = landing;
 
   return (
-    <footer className="w-full border-t border-white/5 bg-zinc-950 py-12 mt-20">
-      <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
+    <footer className="w-full bg-white border-t border-zinc-100 py-8 sm:py-10">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 lg:px-12 md:flex-row">
         
-        {/* Links */}
-        <div className="flex items-center gap-6">
-          {footer.links.map((link) => (
-            <Link 
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-zinc-400 transition-colors hover:text-white"
-            >
-              {link.label}
-            </Link>
-          ))}
+        {/* Left: Contact Link */}
+        <div className="flex items-center">
+          <a
+            href={footer.contact.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-[#666779] hover:text-[#807EF1] transition-colors"
+          >
+            {footer.contact.label}
+          </a>
         </div>
 
-        {/* Socials & Copyright */}
-        <div className="flex flex-col items-center gap-4 md:items-end md:gap-2">
+        {/* Right: Social & Copyright */}
+        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
           <div className="flex items-center gap-4">
             {footer.socials.map((social) => (
-              <a 
+              <a
                 key={social.platform}
                 href={social.href}
                 aria-label={`${social.platform}（${social.label}）`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-zinc-500 transition-colors hover:text-white"
+                className="flex items-center gap-2 text-zinc-700 hover:text-black transition-colors"
               >
-                <XIcon />
-                <span className="text-xs font-medium">{social.label}</span>
+                <XIcon className="w-3.5 h-3.5" />
+                <span className="text-sm font-medium text-[#666779]">{social.label}</span>
               </a>
             ))}
           </div>
-          <span className="text-xs text-zinc-600 font-medium tracking-wide">
+
+          <span className="text-xs font-normal text-[#9091A2]">
             {footer.copyright}
           </span>
         </div>

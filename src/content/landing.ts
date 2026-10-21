@@ -17,18 +17,12 @@
 export const landing = {
   /**
    * プレローンチ告知。
-   * enabled が true の間はバナーを表示し、CTA がストアボタンの代わりに
-   * 先行アクセス登録 (site.ts の earlyAccessForm) になる。
-   * 正式リリース時は enabled を false にする（CTA の再設計もあわせて行う）。
    */
   notice: {
-    enabled: true,
-    /** バナー本文（1 行想定） */
+    enabled: false, // Figmaデザインではクリーンなヘッダーを表示するためバナーは非表示
     message: "正式リリースに向けて開発中。先行アクセス受付中です。",
-    /** プレローンチ中の download セクション見出し（enabled のとき download.title / subtitle の代わりに使う） */
     downloadTitle: "先行アクセス受付中",
     downloadSubtitle: "あなたの番組づくりを、いちばん最初に",
-    /** プレローンチ中に表示する先行アクセス登録 CTA のラベル（リンク先は site.ts の earlyAccessForm） */
     earlyAccessLabel: "先行アクセスに登録",
   },
 
@@ -36,108 +30,144 @@ export const landing = {
   nav: {
     logoAlt: "Kotoriva",
     links: [
-      { label: "About", href: "#about" },
-      { label: "Services", href: "#services" },
+      { label: "Kotorivaについて", href: "#about" },
+      { label: "キャラクター", href: "#characters" },
     ],
     cta: "先行アクセス",
   },
 
   /** 1. ヒーロー（ファーストビュー） */
   hero: {
-    title: "あなたの知識と想いを、\n好きになれる声に乗せて。",
-    subtitle: "書くだけで、AIが台本も声も配信も。",
-    /**
-     * ストアリンクは正式リリース後 (notice.enabled === false) にのみ表示される。
-     * リスナー向け聴取アプリ Kotoriva の配信リンク。
-     */
-    primaryCta: {
-      label: "Download on the App Store",
-      icon: "Apple",
-      href: "https://apps.apple.com/jp/app/transpods/id6755274570",
-    },
-    secondaryCta: {
-      label: "GET IT ON Google Play",
-      icon: "Play",
-      href: "https://play.google.com/store/apps/details?id=com.transpod.podstudy&hl=ja",
-    },
+    badge: "記事をもとに、AIがポッドキャストを作成・配信",
+    title: "あなたの想いを、\n心に届くポッドキャストに。",
+    subtitle: "記事のテーマにあったキャラクターと番組設定で、\n聴く人の理解と共感を深める会話に。",
+    cta: "先行アクセスに登録",
+    podcastSamples: [
+      {
+        id: "strategy",
+        label: "ポッドキャストサンプル",
+        title: "戦略の裏側",
+        duration: "03:00",
+        totalSeconds: 180,
+        coverImage: "/podcast-cover.png",
+      },
+      {
+        id: "tech",
+        label: "ポッドキャストサンプル",
+        title: "未来を創る",
+        duration: "03:45",
+        totalSeconds: 225,
+        coverImage: "/podcast-cover-tech.jpg",
+      },
+      {
+        id: "culture",
+        label: "ポッドキャストサンプル",
+        title: "夜更かしの読書室",
+        duration: "02:30",
+        totalSeconds: 150,
+        coverImage: "/podcast-cover-culture.jpg",
+      },
+    ],
   },
 
-  /** 2. アバウト（About） */
+  /** 2. アバウト & 5ステップ（About） */
   about: {
-    title: "About",
-    description:
-      "Kotoriva は、AIキャラクターと一緒に\nポッドキャストを作れるサービスです。\n\n伝えたい知識や想いはあるけれど、\n自分で話すのも、続けるのも難しい。\nそんな方が、好きになれる声と\nキャラクターで発信できるように。\n\n誰もが自分の知識や想いを、\n好きになれる声とキャラクターに乗せて\n届けられる世界をつくる。",
+    badge: "簡単5ステップでポッドキャスト制作",
+    steps: [
+      {
+        number: 1,
+        title: "番組の構成の設定",
+        description: "テーマや目的に合わせて、番組を作成。",
+      },
+      {
+        number: 2,
+        title: "ホストを選ぶ",
+        description: "テーマや雰囲気に合わせて、AIキャラクターを選択。",
+      },
+      {
+        number: 3,
+        title: "記事を入力",
+        description: "メモ・記事・物語を渡すだけ。すでに書いた記事から、番組を始められます。",
+      },
+      {
+        number: 4,
+        title: "エピソード生成・修正",
+        description: "台本も音声も、AIが生成。修正はテキストを直すだけ。録り直しは、ありません。",
+      },
+      {
+        number: 5,
+        title: "ワンクリック配信",
+        description: "Spotify・Apple Podcasts・YouTube・RSSへ、ワンクリックで配信できます。",
+      },
+    ],
+    heading: {
+      line1: "話したいテーマを、",
+      gradient: "好きなAIキャラクター",
+      line2: "と",
+    },
+    paragraphs: [
+      "伝えたい知識や想いはあるけれど、自分で話すのも、続けるのも難しい。そんな方が、好きになれる声とキャラクターで発信できるように。",
+      "誰もが自分の知識や想いを、好きになれる声とキャラクターに乗せて届けられる世界をつくる。",
+    ],
   },
 
-  /** 3. サービス機能（Services） */
-  services: {
-    title: "Services",
-    /**
-     * 紹介動画の埋め込み。旧アプリのデモ動画のため、新サービスの
-     * 動画ができるまで非表示 (enabled: false)。
-     */
-    video: {
-      enabled: false,
-      youtubeId: "J-U6t8PeKJI",
-    },
-    /** 事業説明資料（Kotoriva_事業説明_20260920）のプロダクトフロー 4 ステップに対応 */
+  /** 3. キャラクターサンプル */
+  characters: {
+    title: "キャラクターサンプル",
     items: [
       {
-        title: "ソースを渡す",
-        englishTitle: "Step 01",
-        description:
-          "メモ・記事・物語を渡すだけ。すでに書いた記事から、番組を始められます。",
-        icon: "Source",
+        id: "rio",
+        name: "夏目リオ",
+        roman: "Natume Rio",
+        description: "服飾専門卒のギャル。古着やファッションに詳しく、セルフネイルも好き。明るく親しみやすい。",
+        image: "/character-rio.png",
       },
       {
-        title: "ホストを選ぶ",
-        englishTitle: "Step 02",
-        description:
-          "テーマや雰囲気に合わせて、AIキャラクターを選択。驚き方や共感のしかたまで、そのキャラクターらしく話します。",
-        icon: "Host",
+        id: "sumire",
+        name: "花小路すみれ",
+        roman: "Hanakouji Sumire",
+        description: "老舗食品会社の創業家生まれのお嬢様。上品で穏やかな物腰を持ち、細やかな気配りで場を整える。",
+        image: "/character-sumire.png",
       },
       {
-        title: "エピソード生成",
-        englishTitle: "Step 03",
-        description:
-          "台本も音声も、AIが生成。修正はテキストを直すだけ。録り直しは、ありません。",
-        icon: "Episode",
-      },
-      {
-        title: "ワンクリック配信",
-        englishTitle: "Step 04",
-        description:
-          "Spotify・Apple Podcasts・YouTube・RSSへ、ワンクリックで配信できます。",
-        icon: "Publish",
+        id: "kagetuna",
+        name: "真柴 景綱",
+        roman: "Mashiba Kagetuna",
+        description: "備えを重んじる戦国武将。慎重で責任感が強く、現代の暮らしにも順応。経験に基づき、冷静に物事を判断する。",
+        image: "/character-kagetuna.png",
       },
     ],
   },
 
-  /** 4. 先行アクセス / ダウンロード (CTA) */
-  download: {
-    /** 正式リリース後 (notice.enabled === false) に表示される文言 */
-    title: "無料で番組をつくる",
-    subtitle: "あなたの言葉を、ポッドキャストに",
-    primaryCta: {
-      label: "Download on the App Store",
-      href: "https://apps.apple.com/jp/app/transpods/id6755274570",
-    },
-    secondaryCta: {
-      label: "GET IT ON Google Play",
-      href: "https://play.google.com/store/apps/details?id=com.transpod.podstudy&hl=ja",
-    },
+  /** 4. 制作実績一例 */
+  achievements: {
+    title: "制作実績一例",
+    items: [
+      { id: "1", title: "テキスト" },
+      { id: "2", title: "テキスト" },
+      { id: "3", title: "テキスト" },
+      { id: "4", title: "テキスト" },
+    ],
   },
 
-  /** 5. フッター */
+  /** 5. 先行アクセス受付中 (CTA) */
+  access: {
+    subtitle: "あなたの番組づくりを、いちばん最初に",
+    title: "先行アクセス受付中",
+    cta: "先行アクセスに登録",
+    symbolImage: "/kotoriva-symbol.png",
+  },
+
+  /** 6. フッター */
   footer: {
-    links: [
-      { label: "お問い合せ", href: "https://docs.google.com/forms/d/e/1FAIpQLSf-dLsHo7Al2x4tLaapsY2H0ZZKXfwpuxC2zYWvRPqwY4FwTg/viewform?usp=dialog" },
-    ],
+    contact: {
+      label: "お問い合わせ",
+      href: "https://docs.google.com/forms/d/e/1FAIpQLSf-dLsHo7Al2x4tLaapsY2H0ZZKXfwpuxC2zYWvRPqwY4FwTg/viewform?usp=dialog",
+    },
     socials: [
-      /** 公式アカウント開設までは代表の個人アカウントを掲載（公式と誤解されないよう label を表示） */
-      { platform: "X", label: "代表 山田", href: "https://x.com/yamatetsu0703", icon: "X" },
+      { platform: "X", label: "代表 山田", href: "https://x.com/yamatetsu0703" },
     ],
-    copyright: `©︎ Kotoriva`,
+    copyright: "© Kotoriva",
   },
 } as const;
 
