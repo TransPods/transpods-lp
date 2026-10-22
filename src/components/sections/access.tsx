@@ -56,9 +56,7 @@ export function Access() {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
           <a
-            href={siteConfig.links.earlyAccessForm}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={siteConfig.links.signup}
             className="group inline-flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-[#807EF1] to-[#88D8EE] text-white font-bold text-sm sm:text-base tracking-wide shadow-xl shadow-[#807EF1]/30 hover:shadow-2xl hover:shadow-[#807EF1]/45 hover:scale-[1.03] active:scale-95 transition-all duration-200"
           >
             <span>{access.cta}</span>
