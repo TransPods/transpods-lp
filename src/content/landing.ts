@@ -15,17 +15,6 @@
  */
 
 export const landing = {
-  /**
-   * プレローンチ告知。
-   */
-  notice: {
-    enabled: false, // Figmaデザインではクリーンなヘッダーを表示するためバナーは非表示
-    message: "正式リリースに向けて開発中。先行アクセス受付中です。",
-    downloadTitle: "先行アクセス受付中",
-    downloadSubtitle: "あなたの番組づくりを、いちばん最初に",
-    earlyAccessLabel: "先行アクセスに登録",
-  },
-
   /** ヘッダー / ナビゲーション */
   nav: {
     logoAlt: "Kotoriva",
@@ -33,7 +22,7 @@ export const landing = {
       { label: "Kotorivaについて", href: "#about" },
       { label: "キャラクター", href: "#characters" },
     ],
-    cta: "先行アクセス",
+    cta: "無料で始める",
   },
 
   /** 1. ヒーロー（ファーストビュー） */
@@ -41,7 +30,7 @@ export const landing = {
     badge: "記事をもとに、AIがポッドキャストを作成・配信",
     title: "あなたの想いを、\n心に届くポッドキャストに。",
     subtitle: "記事のテーマにあったキャラクターと番組設定で、\n聴く人の理解と共感を深める会話に。",
-    cta: "先行アクセスに登録",
+    cta: "無料で始める",
     podcastSamples: [
       {
         id: "strategy",
@@ -150,11 +139,11 @@ export const landing = {
     ],
   },
 
-  /** 5. 先行アクセス受付中 (CTA) */
+  /** 5. CTA（Studio の新規登録へ） */
   access: {
     subtitle: "あなたの番組づくりを、いちばん最初に",
-    title: "先行アクセス受付中",
-    cta: "先行アクセスに登録",
+    title: "今すぐはじめよう",
+    cta: "無料で始める",
     symbolImage: "/kotoriva-symbol.png",
   },
 
