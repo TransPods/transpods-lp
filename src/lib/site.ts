@@ -4,6 +4,11 @@
  * LP の本文テキストは src/content/landing.ts に分離している。
  */
 
+import { getStudioUrl } from "./studio-url";
+
+/** Kotoriva Studio（アプリ本体）。環境ごとに NEXT_PUBLIC_STUDIO_URL で切り替える */
+const studioUrl = getStudioUrl();
+
 export const siteConfig = {
   name: "Kotoriva",
   /** 本番ドメイン。Vercel で www をプライマリにしている（kotoriva.com・transpods.app からは 308 で転送） */
@@ -15,14 +20,10 @@ export const siteConfig = {
   locale: "ja_JP",
   /** OGP 画像（1200x630）。public/ に配置予定 */
   ogImage: "/og-image.png",
-  /** App Store / Google Play 等の配信リンク（公開時に確定） */
   links: {
-    appStore: "#",
-    googlePlay: "#",
+    /** CTA の遷移先（Studio の新規登録） */
+    signup: `${studioUrl}/signup`,
     twitter: "https://x.com/yamatetsu0703",
-    /** 先行アクセス登録フォーム（Google フォーム） */
-    earlyAccessForm:
-      "https://docs.google.com/forms/d/e/1FAIpQLSe9tBixw7ASdDvQ3B4J11YwPG5EoruDB7Suj2Y3Nggxb48N2g/viewform",
   },
 } as const;
 
