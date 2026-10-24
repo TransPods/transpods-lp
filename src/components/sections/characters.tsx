@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { landing } from "@/content/landing";
 import { Play, Pause } from "lucide-react";
@@ -9,16 +9,46 @@ import { Play, Pause } from "lucide-react";
 export function Characters() {
   const { characters } = landing;
   const [activeVoice, setActiveVoice] = useState<string | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const toggleVoice = (id: string) => {
-    setActiveVoice((prev) => (prev === id ? null : id));
+  // 音声再生・停止の切り替え処理
+  const toggleVoice = (id: string, audioPath?: string) => {
+    // 既存の再生中の音声を停止
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+
+    // 同じボタンを押した場合は停止のみで終了
+    if (activeVoice === id) {
+      setActiveVoice(null);
+      return;
+    }
+
+    // 音声パスが存在しない場合は終了
+    if (!audioPath) return;
+
+    // 新しい音声を再生
+    const newAudio = new Audio(audioPath);
+    audioRef.current = newAudio;
+    setActiveVoice(id);
+
+    newAudio.play().catch((err) => {
+      console.error("音声再生エラー:", err);
+      setActiveVoice(null);
+    });
+
+    // 再生が終わったらアイコンを Play（停止状態）に戻す
+    newAudio.onended = () => {
+      setActiveVoice(null);
+    };
   };
 
   return (
     <section id="characters" className="relative w-full bg-white py-20 lg:py-28 px-6 overflow-hidden">
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
         
-        {/* Section Heading (スマホで可変しても1行を維持) */}
+        {/* Section Heading */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="whitespace-nowrap text-xl min-[360px]:text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#666779] tracking-tight">
             {characters.title}
@@ -50,7 +80,7 @@ export function Characters() {
                     />
                   </div>
 
-                  {/* Character Names & Voice Play Button (再生ボタンを名前の横に移動) */}
+                  {/* Character Names & Voice Play Button */}
                   <div className="mb-3.5 flex items-center justify-between gap-3">
                     <div>
                       <h3 className="text-lg sm:text-[20px] font-bold text-[#292A41]">
@@ -61,10 +91,10 @@ export function Characters() {
                       </p>
                     </div>
 
-                    {/* 再生ボタン（名前の横に配置） */}
+                    {/* 再生ボタン */}
                     <button
                       type="button"
-                      onClick={() => toggleVoice(char.id)}
+                      onClick={() => toggleVoice(char.id, (char as { audio?: string }).audio)}
                       className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gradient-to-r from-[#807EF1] to-[#88D8EE] flex items-center justify-center text-white shadow-md shadow-[#807EF1]/30 hover:shadow-lg hover:shadow-[#807EF1]/40 hover:scale-105 active:scale-95 transition-all shrink-0"
                       aria-label={`${char.name}のボイスサンプルを再生`}
                     >
