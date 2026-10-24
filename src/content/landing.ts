@@ -116,25 +116,28 @@ export const landing = {
     title: "キャラクターサンプル",
     items: [
       {
-        id: "rio",
-        name: "夏目リオ",
-        roman: "Natume Rio",
-        description: "服飾専門卒のギャル。古着やファッションに詳しく、セルフネイルも好き。明るく親しみやすい。",
-        image: "/character-rio.png",
+        id: "yuko",
+        name: "森川優子",
+        roman: "Morikawa Yuko",
+        description: "52歳の女性カウンセラー。穏やかで包容力があり、相手の気持ちに寄り添いながら話を聞く。",
+        image: "/character-yuko.png",
+        audio: "/voice-yuko.wav"
       },
       {
-        id: "sumire",
-        name: "花小路すみれ",
-        roman: "Hanakouji Sumire",
+        id: "tomoya",
+        name: "黒瀬 智也",
+        roman: "Kurose Tomoya",
         description: "老舗食品会社の創業家生まれのお嬢様。上品で穏やかな物腰を持ち、細やかな気配りで場を整える。",
-        image: "/character-sumire.png",
+        image: "/character-tomoya.png",
+        audio: "/voice-tomoya.wav"
       },
       {
-        id: "kagetuna",
-        name: "真柴 景綱",
-        roman: "Mashiba Kagetuna",
+        id: "kirara",
+        name: "星野きらら",
+        roman: "Hoshino Kirara",
         description: "備えを重んじる戦国武将。慎重で責任感が強く、現代の暮らしにも順応。経験に基づき、冷静に物事を判断する。",
-        image: "/character-kagetuna.png",
+        image: "/character-kirara.png",
+        audio: "/voice-kirara.wav"
       },
     ],
   },
