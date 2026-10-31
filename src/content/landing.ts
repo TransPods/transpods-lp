@@ -22,7 +22,7 @@ export const landing = {
       { label: "Kotorivaについて", href: "#about" },
       { label: "キャラクター", href: "#characters" },
     ],
-    cta: "無料で始める",
+    cta: "先行登録",
   },
 
   /** 1. ヒーロー（ファーストビュー） */
@@ -30,7 +30,7 @@ export const landing = {
     badge: "記事をもとに、AIがポッドキャストを作成・配信",
     title: "あなたの想いを、\n心に届くポッドキャストに。",
     subtitle: "記事のテーマにあったキャラクターと番組設定で、\n聴く人の理解と共感を深める会話に。",
-    cta: "無料で始める",
+    cta: "先行登録",
     podcastSamples: [
       {
         id: "strategy",
@@ -142,11 +142,11 @@ export const landing = {
     ],
   },
 
-  /** 5. CTA（Studio の新規登録へ） */
+  /** 5. CTA（先行登録フォームへ） */
   access: {
     subtitle: "あなたの番組づくりを、いちばん最初に",
     title: "今すぐはじめよう",
-    cta: "無料で始める",
+    cta: "先行登録",
     symbolImage: "/kotoriva-symbol.png",
   },
 

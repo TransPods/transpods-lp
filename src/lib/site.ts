@@ -21,8 +21,11 @@ export const siteConfig = {
   /** OGP 画像（1200x630）。public/ に配置予定 */
   ogImage: "/og-image.png",
   links: {
-    /** CTA の遷移先（Studio の新規登録） */
+    /** Studio の新規登録。一般公開したら CTA の遷移先をこちらに戻す */
     signup: `${studioUrl}/signup`,
+    /** CTA の遷移先（先行登録の Google フォーム） */
+    earlyAccessForm:
+      "https://docs.google.com/forms/d/e/1FAIpQLSe9tBixw7ASdDvQ3B4J11YwPG5EoruDB7Suj2Y3Nggxb48N2g/viewform",
     twitter: "https://x.com/yamatetsu0703",
   },
 } as const;
