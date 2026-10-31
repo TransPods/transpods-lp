@@ -43,7 +43,9 @@ export function Header() {
 
           {/* CTA Action Button */}
           <a
-            href={siteConfig.links.signup}
+            href={siteConfig.links.earlyAccessForm}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center h-10 px-6 rounded-full bg-gradient-to-r from-[#807EF1] to-[#88D8EE] text-white font-extrabold text-[13px] tracking-wide shadow-md shadow-[#807EF1]/25 hover:shadow-lg hover:shadow-[#807EF1]/35 hover:opacity-95 active:scale-95 transition-all duration-200"
           >
             {nav.cta}
@@ -53,7 +55,9 @@ export function Header() {
         {/* Mobile Hamburger Button */}
         <div className="flex items-center gap-3 md:hidden">
           <a
-            href={siteConfig.links.signup}
+            href={siteConfig.links.earlyAccessForm}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center h-9 px-4 rounded-full bg-gradient-to-r from-[#807EF1] to-[#88D8EE] text-white font-bold text-xs shadow-sm"
           >
             {nav.cta}
@@ -83,7 +87,9 @@ export function Header() {
             </a>
           ))}
           <a
-            href={siteConfig.links.signup}
+            href={siteConfig.links.earlyAccessForm}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
             className="block text-center w-full py-3 rounded-full bg-gradient-to-r from-[#807EF1] to-[#88D8EE] text-white font-bold text-sm shadow-md"
           >
