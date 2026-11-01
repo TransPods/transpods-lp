@@ -116,7 +116,7 @@ export const landing = {
         id: "tomoya",
         name: "黒瀬 智也",
         roman: "Kurose Tomoya",
-        description: "老舗食品会社の創業家生まれのお嬢様。上品で穏やかな物腰を持ち、細やかな気配りで場を整える。",
+        description: "経営コンサルタント。論理的で合理主義。冷静な分析力と問題解決能力に優れている。",
         image: "/character-tomoya.png",
         audio: "/voice-tomoya.wav"
       },
@@ -124,7 +124,7 @@ export const landing = {
         id: "kirara",
         name: "星野きらら",
         roman: "Hoshino Kirara",
-        description: "備えを重んじる戦国武将。慎重で責任感が強く、現代の暮らしにも順応。経験に基づき、冷静に物事を判断する。",
+        description: "アパレル店員兼インフルエンサーのギャル。メイクやネイルが好き。明るく親しみやすい性格。",
         image: "/character-kirara.png",
         audio: "/voice-kirara.wav"
       },
