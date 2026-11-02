@@ -53,7 +53,7 @@ export function Hero() {
 
             <div className="pt-3">
               <a
-                href={siteConfig.links.earlyAccessForm}
+                href={siteConfig.links.signup}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-gradient-to-r from-[#807EF1] to-[#88D8EE] text-white font-bold text-sm sm:text-base tracking-wide shadow-xl shadow-[#807EF1]/30 hover:shadow-2xl hover:shadow-[#807EF1]/40 hover:scale-[1.02] active:scale-95 transition-all duration-200"
